@@ -54,6 +54,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\AnotherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AnotherForm.Designer.cs">
+      <DependentUpon>AnotherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SecurityLookupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SecurityLookupForm.Designer.cs">
+      <DependentUpon>SecurityLookupForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -66,6 +78,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\AnotherForm.resx">
+      <DependentUpon>AnotherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SecurityLookupForm.resx">
+      <DependentUpon>SecurityLookupForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -81,7 +99,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
-    <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
