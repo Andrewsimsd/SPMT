@@ -14,15 +14,22 @@ namespace SPMT
     {
         private View.SecurityLookupForm securityLookupForm = new View.SecurityLookupForm();
         private View.AnotherForm anotherForm = new View.AnotherForm();
+        private SmptController controller;
 
         public MainForm()
         {
             InitializeComponent();
+
+            this.controller = SmptController.GetInstance();
+            this.securityLookupForm = new View.SecurityLookupForm();
+            this.anotherForm = new View.AnotherForm();
+            
             securityLookupForm.TopLevel = false;
             securityLookupForm.Dock = DockStyle.Fill;
             this.pnlCurrentForm.Controls.Clear();
             this.pnlCurrentForm.Controls.Add(securityLookupForm);
             securityLookupForm.Show();
+
         }
 
         private void btnSecurityLookup_Click(object sender, EventArgs e)
